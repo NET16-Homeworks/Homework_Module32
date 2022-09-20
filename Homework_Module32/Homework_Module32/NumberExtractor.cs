@@ -8,29 +8,21 @@ namespace Homework_Module32
 {
     internal class NumberExtractor
     {
-        public NumberExtractor(Stack<int> numbers)
+        public NumberExtractor(List<int> numbers)
         {
             Numbers = numbers;
         }
-        public Stack<int> Numbers { get; set; }
+        public List<int> Numbers { get; set; }
 
         public IEnumerator<int> GetEnumerator()
         {
-            Stack<int> outputNumbers = new Stack<int>();
-            int count = Numbers.Count;
-            for (int i = 0; i < count; i++)
+            for (int i = Numbers.Count-1; i >= 0; i--)
             {
-                int temp = Numbers.Pop();
-                if (temp % 2 == 0 || temp % 3 == 0)
+                if (Numbers[i] % 2 == 0 || Numbers[i] % 3 == 0)
                 {
-                    outputNumbers.Push(temp);
+                    yield return Numbers[i];
                 }
-            }
-            foreach (var number in outputNumbers)
-            {
-                yield return number;
-            }
-            
+            }       
         }
     }
 }
