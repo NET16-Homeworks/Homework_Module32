@@ -16,8 +16,8 @@ List<string> namesList2 = new()
 tasks.GetListUniqueNames(new List<List<string>> { namesList1, namesList2 });
 
 // #2
-//LinkedList<int> numberLinkedList = tasks.CreateIntLinkedListWithValues(100_000, 0, 100);
-//tasks.SwapEvenOdd(numberLinkedList);
+LinkedList<int> numberLinkedList = tasks.CreateIntLinkedListWithValues(100_000, 0, 100);
+tasks.SwapEvenOdd(numberLinkedList);
 
 // #3
 tasks.GetSymbolsCountInString("asdasagasfasdasdasdasf");
