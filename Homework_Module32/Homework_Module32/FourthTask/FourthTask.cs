@@ -16,14 +16,9 @@ namespace Homework_Module32.FourthTask
             _numbers = numbers;
         }
 
-        public void Process()
+        public IEnumerable<int> GetEnumerable()
         {
-            
-        } 
-
-        public IEnumerator<int> GetNumbers()
-        {
-            for (int i = 0; i < _numbers.Length; i++)
+            for (int i = _numbers.Length - 1; i >= 0; i--)
             {
                 if(_numbers[i] % 3 == 0 || _numbers[i] % 2 == 0)
                 {

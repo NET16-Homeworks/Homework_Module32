@@ -9,33 +9,35 @@ namespace Homework_Module32.FirstTask
 {
     internal class FirstTask
     {
-        public void ShowUniqueNames(IEnumerable<string>[] listNames)
+        public void GetUniqueNames(IEnumerable<string>[] listNames)
         {
             int listNumber = 1;
             foreach (var names in listNames)
             {
-                FindUniqueNamesInList(names, listNumber);
+                FindUniqueNamesInCollection(names, listNumber);
                 listNumber++;
             }
         }
-
-        private void FindUniqueNamesInList(IEnumerable<string> names, int listNumber)
+        private void FindUniqueNamesInCollection(IEnumerable<string> names, int listNumber)
         {
             HashSet<string> uniqueNames = new HashSet<string>();
             foreach (var name in names)
             {
                 uniqueNames.Add(name);
             }
-            ShowUniqueNames(uniqueNames, listNumber);
+            ShowUniqueNamesFromCollection(uniqueNames, listNumber);
         }
-        private void ShowUniqueNames(IEnumerable uniqueNames, int listNumber)
+        private void ShowUniqueNamesFromCollection(IEnumerable uniqueNames, int listNumber)
         {
+            int count = 0;
             Console.WriteLine($"Displaying all unique names in the list {listNumber}:");
             foreach (var name in uniqueNames)
             {
                 Console.Write($"\"{name}\", ");
+                count++;
             }
             Console.WriteLine();
+            Console.WriteLine($"Total number of unique names: {count}");
         }
     }
 }

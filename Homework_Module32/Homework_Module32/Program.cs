@@ -29,9 +29,8 @@ namespace Homework_Module32
                             {
                                 "Pavel", "Lena", "Ilya", "Roman", "Gleb", "Ilya", "Matvey", "Gleb"
                             },
-
                         };
-                        firstTask.ShowUniqueNames(listsOfNames);
+                        firstTask.GetUniqueNames(listsOfNames);
                         break;
 
                     case 2:
@@ -41,32 +40,34 @@ namespace Homework_Module32
 
                     case 3:
                         var thirdTask = new ThirdTask.ThirdTask();
-                        Dictionary<char, int> pairs = new Dictionary<char, int>();
                         thirdTask.NumbersOfUniqueSymbols("Hello world");
-                        foreach (var pair in pairs)
-                        {
-                            
-                        }
                         break;
 
                     case 4:
-                        //Random rnd = new Random();
-                        //int[] numbers = new int[10];
-                        //for (int i = 0; i < numbers.Length; i++)
-                        //{
-                        //    numbers[i] = rnd.Next(0, 1000);
-                        //}
+                        Random rnd = new Random();
+                        int[] numbers = new int[10];
+                        for (int i = 0; i < numbers.Length; i++)
+                        {
+                            numbers[i] = rnd.Next(0, 1000);
+                        }
+                        Console.WriteLine("Removing all array elements: ");
+                        foreach (var item in numbers)
+                        {
+                            Console.Write("|" + item);
+                        }
+                        Console.WriteLine("|");
 
-                        //var fourthTask = new FourthTask.FourthTask(numbers);
-                        //var array = fourthTask.GetNumbers();
-                        //foreach (var item in array)
-                        //{
-                        //    Console.WriteLine(item);
-                        //}
-                        //break;
+                        var fourthTask = new FourthTask.FourthTask(numbers);
+                        Console.WriteLine("Removing required array elements: ");
+                        foreach (var item in fourthTask.GetEnumerable())
+                        {
+                            Console.Write("|" + item);
+                        }
+                        Console.WriteLine("|");
+                        break;
 
                     default:
-                        Console.WriteLine("You entered wrond number");
+                        Console.WriteLine("You entered wrond number!");
                         break;
                 }
                 Menu();
@@ -76,14 +77,14 @@ namespace Homework_Module32
 
         static void Menu()
         {
-            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
             Console.WriteLine("Menu: ");
             Console.WriteLine("1. Task #1 - \"Вывод уникальных имен\"");
-            Console.WriteLine("2. Task #2");
-            Console.WriteLine("3. Task #3");
-            Console.WriteLine("4. Task #4");
+            Console.WriteLine("2. Task #2 - \"LinkedList коллекция\"");
+            Console.WriteLine("3. Task #3 - \"Уникальные символы в строке\"");
+            Console.WriteLine("4. Task #4 - \"Вывод элементов массива, используя yield\"");
             Console.WriteLine("5. Exit from program");
-            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
     }
 }

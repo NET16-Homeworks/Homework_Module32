@@ -23,21 +23,11 @@ namespace Homework_Module32.SecondTask
             }
             LinkedListNode<int> node = linkedList.First;
 
-            /*Console.WriteLine("First check of linked list:");
-            while (node != null)
-            {
-                Console.Write(node.Value + " ");
-                node = node.Next;
-            }
-            Console.WriteLine();
-            node = linkedList.First;*/
-
             var index = 0;
             while (node != null)
             {
                 if(node.Next != null && node.Previous != null)
                 {
-                    //Console.WriteLine($"{node.Previous.Value} => {node.Value} => {node.Next.Value}");
                     if (node.Next.Value % 2 == 0 && node.Previous.Value % 2 == 1)
                     {
                         var t = node.Previous.Value;
@@ -49,16 +39,6 @@ namespace Homework_Module32.SecondTask
                 index++;
                 node = node.Next;
             }
-            /*
-            Console.WriteLine("Final check: ");
-            node = linkedList.First;
-            while(node != null)
-            {
-                Console.Write(node.Value + " ");
-                node = node.Next;
-            }
-            Console.WriteLine();
-            */
         }
     }
 }

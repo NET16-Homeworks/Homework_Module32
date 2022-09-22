@@ -25,7 +25,7 @@ namespace Homework_Module32.ThirdTask
             }
             foreach (var symbol in symbols)
             {
-                Console.WriteLine($"Value: {symbol.Key}, Iterations: {symbol.Value}");
+                Console.WriteLine($"Value: {symbol.Key}, Iteration: {symbol.Value}");
             }
         }
     }
