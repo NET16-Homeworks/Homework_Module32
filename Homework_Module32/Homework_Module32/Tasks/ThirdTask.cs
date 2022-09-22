@@ -1,6 +1,6 @@
 ﻿namespace Homework_Module32.Tasks
 {
-    public partial class HomeTask
+    public class ThirdTask
     {
         public void GetSymbolsCountInString(string @string)
         {

@@ -1,7 +1,7 @@
 ﻿using Homework_Module32.Classes;
 using Homework_Module32.Tasks;
 
-var tasks = new HomeTask();
+var firstTask = new FirstTask();
 
 // #1
 List<string> namesList1 = new()
@@ -13,14 +13,16 @@ List<string> namesList2 = new()
     "Вася", "Петя", "Гриша", "Вася", "Саня", "Петя", "Александр", "Веня"
 };
 
-tasks.GetListUniqueNames(new List<List<string>> { namesList1, namesList2 });
+firstTask.GetListUniqueNames(new List<List<string>> { namesList1, namesList2 });
 
 // #2
-LinkedList<int> numberLinkedList = tasks.CreateIntLinkedListWithValues(100_000, 0, 100);
-tasks.SwapEvenOdd(numberLinkedList);
+var secondTask = new SecondTask();
+LinkedList<int> numberLinkedList = secondTask.CreateIntLinkedListWithValues(100_000, 0, 100);
+secondTask.SwapEvenOdd(numberLinkedList);
 
 // #3
-tasks.GetSymbolsCountInString("asdasagasfasdasdasdasf");
+var thirdTask = new ThirdTask();
+thirdTask.GetSymbolsCountInString("asdasagasfasdasdasdasf");
 
 // #4 
 

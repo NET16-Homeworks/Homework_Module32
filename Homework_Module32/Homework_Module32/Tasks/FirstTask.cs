@@ -1,6 +1,6 @@
 ﻿namespace Homework_Module32.Tasks
 {
-    public partial class HomeTask
+    public class FirstTask
         {
         public void GetListUniqueNames(List<List<string>> listOfLists)
         {

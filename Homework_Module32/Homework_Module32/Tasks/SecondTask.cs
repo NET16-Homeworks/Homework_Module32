@@ -1,6 +1,6 @@
 ﻿namespace Homework_Module32.Tasks
 {
-    public partial class HomeTask
+    public class SecondTask
     {
         public LinkedList<int> CreateIntLinkedListWithValues(int numberOfValues, int minValue, int maxValue)
         {
