@@ -5,7 +5,6 @@ namespace Task1
 {
     internal sealed class Program
     {
-        
         static void Main(string[] args)
         {
             List<string>? firstListNames = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(
@@ -33,7 +32,7 @@ namespace Task1
             foreach (var listNames in CollectionsMarshal.AsSpan(peopleNames))
             {
                 foreach (var name in CollectionsMarshal.AsSpan(listNames))
-                {
+                { 
                     if (!uniqueName.Contains(name))
                     {
                         uniqueName.Add(name);
