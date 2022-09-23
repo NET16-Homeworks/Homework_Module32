@@ -9,22 +9,22 @@ namespace Homework_Module32
 {
     internal class TestClass
     {
-        private List<int> listOfNumbers;
+        private List<int> numberList;
 
-        public TestClass(List<int> listOfNumbers)
+        public TestClass(List<int> listOfNumb)
         {
-            this.listOfNumbers = listOfNumbers;
+            this.numberList = listOfNumb;
         }
 
-        public IEnumerable GetEnum()
+        public IEnumerable GetEnumerable()
         {
-            for (var i = listOfNumbers.Count - 1; i >= 0; i--) ///S KONCA!!!
+            for (var i = numberList.Count - 1; i >= 0; i--)
             {
-                if (((listOfNumbers[i] % 2) != 0) && ((listOfNumbers[i] % 3) != 0)) //
+                if (((numberList[i] % 2) != 0) && ((numberList[i] % 3) != 0))
                 {
-                    yield return listOfNumbers[i]; //определяем возвращаемый элемент
+                    yield return numberList[i];
                 }
-            }       
+            }
         }
     }
 }
