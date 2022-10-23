@@ -23,10 +23,15 @@ var task2 = new Task2();
 var rn = task2.GetRandomNumbers(0, 100);
 task2.GetIndexAndValueOfIteration(rn);
 
-Console.WriteLine("-----------Task 3-----------");
+Console.WriteLine("-----------Task 3 with LINQ-----------");
 var task3 = new Task3();
 
 task3.GetSymbolsAndCount("GesPacchhoolinnika");
+
+Console.WriteLine("-----------Task 3-----------");
+var task3b = new Task3();
+
+task3b.GetSymbolsAndCountArray("GesPacchhoolinnika");
 
 Console.WriteLine("-----------Task 4-----------");
 int[] array = new int[] {1,2,3,5,7,11,15};
